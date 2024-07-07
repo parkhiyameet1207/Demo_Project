@@ -1,9 +1,19 @@
-import logo from './logo.svg';
-import Demo from './Components/Demo';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Board from './components/Board';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Demo/>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Board} />
+        {/* Add more routes as needed */}
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
